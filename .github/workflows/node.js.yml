@@ -52,4 +52,4 @@ jobs:
         # 👆 if cache hits the skip this step.
       run: npm ci
     - run: npm run build --if-present
-    - run: ng test -- --watch=false --browser=ChromeHeadless
+    - run: npm test -- --watch=false --browsers=ChromeHeadless
