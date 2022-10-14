@@ -1,19 +1,15 @@
-name: Deployment
-
+name: Deploy
 on:
   push:
     branches:
-      - main
-
+      - master
 jobs:
-  deployment:
+  build:
     runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
+    
     steps:
-      - name: All things angular
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
-        with:
-              github_access_token: ${{ secrets.MY_SECRET }}
-              deploy_branch: main
-              angular_dist_build_folder: dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
+    - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+      with:
+            github_access_token: ${{ secrets.MY_SECRET }}
+            deploy_branch: main
+            angular_dist_build_folder: dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
