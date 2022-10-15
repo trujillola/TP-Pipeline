@@ -14,5 +14,5 @@ jobs:
             deploy_branch: main
             base_href: /helloworld/
             angular_project_dir: ./helloworld
-            angular_dist_build_folder: /helloworld/dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
+            angular_dist_build_folder: helloworld/dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
 
