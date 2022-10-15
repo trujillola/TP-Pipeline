@@ -11,15 +11,10 @@ jobs:
       matrix:
         node-version: [18.x]
 
-    defaults : 
-      run: 
-        working-directory : helloworld
-        
     steps:
     - uses: actions/checkout@v2
     - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
       with:
-            working-directory : helloworld
             github_access_token: ${{ secrets.MY_SECRET }}
             deploy_branch: main
             angular_dist_build_folder: dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
