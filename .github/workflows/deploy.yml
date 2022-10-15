@@ -6,15 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
-      with:
+     - uses: actions/checkout@v2
+     - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+       with:
             github_access_token: ${{ secrets.MY_SECRET }}
             deploy_branch: main
+            base_href: /helloworld/
             angular_dist_build_folder: dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
+
