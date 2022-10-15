@@ -14,5 +14,6 @@ jobs:
             github_access_token: ${{ secrets.MY_SECRET }}
             deploy_branch: main
             base_href: /helloworld/
+            angular_project_dir: ./helloworld
             angular_dist_build_folder: dist/helloworld # The folder where your project is supposed to be after running ng build by the action.
 
